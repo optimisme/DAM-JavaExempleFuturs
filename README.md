@@ -1,4 +1,4 @@
-# Exemple Futurs i Mutex #
+# Exemple Futurs #
 
 En aquest projecte hi ha exemples de Futurs en Java
 
