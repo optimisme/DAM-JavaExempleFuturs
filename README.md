@@ -7,11 +7,11 @@ En aquest projecte hi ha exemples de Futurs en Java
 A Linux i OSX:
 
 ```
-./run.sh
+./compile.sh
 ```
 
 A Windows Powershell:
 
 ```
-.\run.bat
+.\compile.bat
 ```
