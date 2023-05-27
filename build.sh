@@ -15,7 +15,9 @@ rm -rf ./bin
 mkdir -p ./bin
 
 # Copy the assets directory to the bin directory
-cp -r ./assets ./bin
+if [ -d ./assets ]; then
+    cp -r ./assets ./bin
+fi
 
 # Compile the Java source files and place the .class files in the bin directory
 javac -d ./bin/ ./src/*.java
@@ -37,13 +39,18 @@ mv ./$folderDevelopment/Project.jar ./$folderRelease/Project.jar
 # Create the 'run.sh' file
 cat > run.sh << EOF
 #!/bin/bash
+java -jar Project.jar
+EOF
 
+# Create the 'run.ps1' file
+cat > run.ps1 << EOF
 java -jar Project.jar
 EOF
 
 # Fem l'arxiu executable
 chmod +x run.sh
 mv run.sh ./$folderRelease/run.sh
+mv run.ps1 ./$folderRelease/run.ps1
 
 # Run the Project.jar file
 cd ./$folderRelease

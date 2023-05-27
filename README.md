@@ -7,18 +7,18 @@ En aquest projecte hi ha exemples de Futurs en Java
 A Linux i OSX:
 
 ```
-./compile.sh
+./build.sh
 ```
 
 A Windows Powershell:
 
 ```
-.\compile.bat
+.\build.ps1
 ```
 
 Or, from Visual Studio Code:
 
 ```
-"Terminal > Run task > Compile Project"
-
+"Terminal > Run task > Compile for UNIX"
+"Terminal > Run task > Compile for PowerShell"
 ```
