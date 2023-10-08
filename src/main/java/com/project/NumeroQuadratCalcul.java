@@ -1,19 +1,17 @@
-import java.util.Random;
+package com.project;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-public class EsperaSegonsCalcul {
+public class NumeroQuadratCalcul {
+
     private ExecutorService executor = Executors.newSingleThreadExecutor();
   
     public Future<Integer> calculate(Integer input) {        
         return executor.submit(() -> {
-            long millis = (new Random()).nextInt(3000) + 1000;
-            System.out.println("Trigarà: " + (millis / 1000.0) + " milisegons");
-            Thread.sleep(millis);
+            Thread.sleep(1000);
             return input * input;
         });
     }
-
     public void shutdown () { executor.shutdown(); }
 }
